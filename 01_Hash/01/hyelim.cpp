@@ -1,42 +1,45 @@
 #include <string>
 #include <vector>
-#include <string.h>
+//#include <string.h>
 using namespace std;
 
+#define totalSize 100000
+
 int myhash(const string &key, int tableSize) {
-	int hashVal = 0;
+    int hashVal = 0;
 
-	for (int i = 0; i < key.length(); i++)
-		hashVal = 37 * hashVal + key[i];
+    int length = key.length();
+    for (int i = 0; i < length; i++)
+        hashVal += 13 * hashVal + key[i];
 
-	hashVal %= tableSize;
+    hashVal %= tableSize;
 
-	if (hashVal < 0)
-		hashVal += tableSize;
+    if (hashVal < 0)
+        hashVal += tableSize;
 
-	return hashVal;
+    return hashVal;
 }
 
 string solution(vector<string> participant, vector<string> completion) {
-    string answer = "";
-    
-    int hashmap[100000]= {0, };
+    string answer;
+
+    int hashmap[totalSize]= {0, };
     //int hashmap[100000];
-	//memset(hashmap, 0, sizeof(int) * 100000);
+    //memset(hashmap, 0, sizeof(int) * 100000);
 
-	int length = completion.size();
-	for (int i = 0; i < length; i++)
-		hashmap[myhash(completion[i], 100000)]++;
+    int length = completion.size();
+    for (int i = 0; i < length; i++)
+        hashmap[myhash(completion[i], totalSize)]++;
 
-	length++;
-	for (int j = 0; j < length; j++) {
-		int res = myhash(participant[j], 100000);
-		hashmap[res]--;
-		if (hashmap[res] == -1) {
-			answer = participant[j];
-			break;
-		}
-	}
+    length++;
+    for (int j = 0; j < length; j++) {
+        int res = myhash(participant[j], totalSize);
+        hashmap[res]--;
+        if (hashmap[res] == -1) {
+            answer = participant[j];
+            break;
+        }
+    }
 
-	return answer;
+    return answer;
 }
