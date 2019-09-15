@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-
 using namespace std;
 
 void quicksort(int*& data, int start, int end) {
