@@ -1,8 +1,8 @@
-# Brute force(완전탐색)
+﻿# Sort(정렬)
 
-* 01. [K번째 수](https://programmers.co.kr/learn/courses/30/lessons/42840) : Level 1
-* 02. [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42839) : Level 2
-* 03. [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42841) : Level 2
+* [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748) : Level 1
+* [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746) : Level 2
+* [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747) : Level 2
 
 ## 참여현황
 풀지 않았다면 빈칸으로, 풀이 중이라면 `진행 중`, 풀이가 끝났다면 `완료`를 입력해주세요.
@@ -10,6 +10,6 @@
 
 |이름|이소영|정의동|임지영|남혜림|
 |--|--|--|--|--|
-|K번째 수|완료||||
+|K번째수|||||
 |가장 큰 수|||||
-|H-Index|완료||||
+|H-Index|||||
